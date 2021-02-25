@@ -15,9 +15,10 @@
 
 # 立ち上げ
 
-1. ```docker-compose django run python manage.py makemigrations```
-2. ```docker-compsoe django run python manage.py migrate```
-3. ```docker-compose up```
+1. ```docker-compose build``` 
+2. ```docker-compose django run python manage.py makemigrations```
+3. ```docker-compsoe django run python manage.py migrate```
+4. ```docker-compose up```
 
 # APIエンドポイント
 
