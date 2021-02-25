@@ -1,4 +1,4 @@
-FROM python:3.4
+FROM python:3
 
 ENV PYTHONUNBUFFERED=1
 
@@ -11,7 +11,7 @@ WORKDIR /app/api
 
 COPY requirements.txt /app/api
 
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
