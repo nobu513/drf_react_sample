@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  django:
+    build: ./api/
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api:/app/api
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend/
+    command: ["npm", "start"]
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app/frontend
+      - node-modules:/app/frontend/node_modules
+
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+volumes:
+  node-modules:

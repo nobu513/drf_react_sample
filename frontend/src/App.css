@@ -1,0 +1,19 @@
+/* .App {
+
+  background:whitesmoke;
+  max-width:500px;
+  display:flex;
+  justify-content: center;
+  margin:0 auto;
+  margin-top:50px;
+  min-height:400px;
+  padding:10px;
+} */
+
+
+
+.App {
+  max-width:400px;
+  margin:0 auto;
+}
+
